@@ -22,7 +22,12 @@
 #
 
 # default attributes for all platforms
-default['ntp']['servers']   = [] # The default recipe sets a list of common NTP servers (COOK-1170)
+default['ntp']['servers']   = [
+'0.amazon.pool.ntp.org',
+'1.amazon.pool.ntp.org',
+'2.amazon.pool.ntp.org',
+'3.amazon.pool.ntp.org'
+] # The default recipe sets a list of common NTP servers (COOK-1170)
 default['ntp']['peers'] = []
 default['ntp']['restrictions'] = []
 default['ntp']['tinker'] = { 'panic' => 0 }

@@ -9,7 +9,7 @@
 
 default['logstash-forwarder']['package_name'] = 'logstash-forwarder'
 default['logstash-forwarder']['service_name'] = 'logstash-forwarder'
-default['logstash-forwarder']['logstash_servers'] = ['localhost:5043']
+default['logstash-forwarder']['logstash_servers'] = ['logs.inet-minerops:5043']
 default['logstash-forwarder']['timeout'] = 15
 default['logstash-forwarder']['config_path'] = '/etc/logstash-forwarder.conf'
 default['logstash-forwarder']['version'] = '0.4.0'
