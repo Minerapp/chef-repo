@@ -108,6 +108,10 @@ action :create do
         action u['action'] if u['action']
       end
 
+      file "#{home_dir}/.bashrc" do
+        action :delete
+      end
+
       if manage_home_files?(home_dir, u['username'])
         Chef::Log.debug("Managing home files for #{u['username']}")
 
