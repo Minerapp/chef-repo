@@ -1,0 +1,10 @@
+{
+  "id"       : "pasha",
+  "comment"  : "Services deploy for dev env",
+  "groups"   : ["minerdevservicedeployers", "minerdevdatabaseadmins" ],
+  "ssh_keys" : [
+    "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCOoCCJ1O5lM9vzoNJh1FSjO9RfZlLZ1KLVmjHvUAeb8heOdi+NGgZRJGFHVJpVfSU+GMZZ3n4dEaXQgNcL5lKfCCvOrDepBxAf+CeVClGplPV+9UUPmfJLtJnsjv34oWnTThqrmZWMw6xloHVrBWqHMdgHNw0XeEXutQK7EPoDyZjR3x0rUxVzFELa+I+w71eKTKJFbbnl/y/v4Vv3BbQ93X1iyO7ae9b2ZOxkXQYSjaXIZ4WuRmYYGuYdeCLupTpbNrSDd8IP9gtAH4pEp+5mCMq3dfmXy3FZS4e/SfPss6zzwFs1R7hVpYSQDUoCfvt4kzWD8a0NqiGpkd9WK/UN minerops",
+    "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCjHNLLdonpp1mLxeft+GGaNoLTNkKmU7VFhV/Q7Ue6YbnDOJzgiZXwV7ZmnuvKRGNlTnQEY3b/bRUY6N5aI1U0iX5ipKnlmukL3woAN7XHhd88lYb/XbcnltYQHhuFlRwy5KThT59q57V86Lv54sG+xyQquWS8edRPQdKa4oVJEwz590bm1Pr/Uk+5uNIrGo8ND0hpPTup71nB25YzsvQeYEOkombilvrVbVcmt/mA5qfHEceFDgJc5MWOw/b2qBKMYHQEErmgvFu7S67jTB8hC1ErePMlJUVdHl6P7sP5la5JavuSom3nFRM9WpoyGtiniC3eDmdRx/H5/GMwXtg7 pasharx@gmail.com"
+  ],
+  "shell": "\/bin\/bash"
+}

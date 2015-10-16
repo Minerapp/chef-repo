@@ -1,9 +1,9 @@
- users_manage "minerdevservicedeployers" do
+ users_manage "minerstagingservicedeployers" do
    group_id 3000
    action [ :remove, :create ]
  end
 
- users_manage "minerdevdatabaseadmins" do
+ users_manage "minerstagingdatabaseadmins" do
    group_id 3000
    action [ :remove, :create ]
  end
