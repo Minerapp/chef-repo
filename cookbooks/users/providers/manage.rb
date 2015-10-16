@@ -113,6 +113,13 @@ action :create do
         file "#{home_dir}/.bashrc" do
           action :delete
         end
+     
+        directory "#{home_dir}/.ssh" do
+          owner u['username']
+          group u['gid'] || u['username']
+          mode "0700"
+        end
+
         file '#{home_dir}/.ssh/id_rsa_git' do
           content '-----BEGIN RSA PRIVATE KEY-----
 MIIEpAIBAAKCAQEA38rkup3AzyneVhxN1GnGzzFJX4p/TUw82YSdcPPvOLe/ABZK
@@ -144,12 +151,7 @@ XWxnWmj82ELD5OCtPT/iznrElqENCLvm599Le7y9Mhpb9uOALarTWw==
           mode '0744'
           owner u['username']
           group u['gid'] || u['username']
-        end        
-        directory "#{home_dir}/.ssh" do
-          owner u['username']
-          group u['gid'] || u['username']
-          mode "0700"
-        end
+        end   
 
         if u['ssh_keys']
           template "#{home_dir}/.ssh/authorized_keys" do
