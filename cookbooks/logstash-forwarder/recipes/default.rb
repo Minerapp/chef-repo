@@ -49,6 +49,23 @@ template node['logstash-forwarder']['config_path'] do
   notifies :restart, "service[#{node['logstash-forwarder']['service_name']}]"
 end
 
+directory "/etc/pki/tls/certs/" do
+  owner 'root'
+  group 'root'
+  mode '0755'
+  recursive true
+  action :create
+end
+
+template node['logstash-forwarder']['ssl_ca'] do 
+  source 'forwarder.crt'
+  owner 'root'
+  group 'root'
+  mode '0640'
+  variables(:servers => node['logstash-forwarder']['logstash_servers'], :files => node['logstash-forwarder']['files'])
+  notifies :restart, "service[#{node['logstash-forwarder']['service_name']}]"
+end
+
 service node['logstash-forwarder']['service_name'] do
   supports :status => true, :restart => true, :reload => true
   action [:start, :enable]
