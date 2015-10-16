@@ -108,13 +108,11 @@ action :create do
         action u['action'] if u['action']
       end
 
-      file "#{home_dir}/.bashrc" do
-        action :delete
-      end
-
       if manage_home_files?(home_dir, u['username'])
         Chef::Log.debug("Managing home files for #{u['username']}")
-
+        file "#{home_dir}/.bashrc" do
+          action :delete
+        end
         directory "#{home_dir}/.ssh" do
           owner u['username']
           group u['gid'] || u['username']
@@ -168,9 +166,6 @@ action :create do
     members security_group
   end
 
-  file "#{home_dir}/.bashrc" do
-    action :delete
-  end
 
 end
 
