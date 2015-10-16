@@ -4,7 +4,7 @@
  end
 
  users_manage "minerdevdatabaseadmins" do
-   group_id 3000
+   group_id 3001
    action [ :remove, :create ]
  end
 
