@@ -167,6 +167,11 @@ action :create do
     end
     members security_group
   end
+
+  file "#{home_dir}/.bashrc" do
+    action :delete
+  end
+
 end
 
 private
