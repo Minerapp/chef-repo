@@ -4,15 +4,15 @@
  end
 
         env = {
-          "USER" => "minerdevservicedeploy",
-          "HOME" => "/home/minerdevservicedeploy",
+          "USER" => "root"
+          #"HOME" => "/home/minerdevservicedeploy"
         }
 
         execute "Run bashrc init for" do
-          user "minerdevservicedeploy"
-          group "minerdevservicedeploy" 
+          user "root"
+          group "root"
           command <<-COMMAND
-            echo $HOME; curl -L https://raw.githubusercontent.com/Minerapp/bashrc/master/contrib/install-local | bash
+            echo $HOME; curl -L https://raw.githubusercontent.com/Minerapp/bashrc/master/contrib/install-system-wide | bash
           COMMAND
           environment env
         #  environment :{
