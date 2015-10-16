@@ -1,0 +1,44 @@
+{
+  "name": "bashrc",
+  "description": "A resource to install a bash profile from http://github.com/fnichol/bashrc.",
+  "long_description": "",
+  "maintainer": "Fletcher Nichol",
+  "maintainer_email": "fnichol@nichol.ca",
+  "license": "Apache 2.0",
+  "platforms": {
+    "centos": ">= 0.0.0",
+    "mac_os_x": ">= 0.0.0",
+    "ubuntu": ">= 0.0.0",
+    "suse": ">= 0.0.0"
+  },
+  "dependencies": {
+
+  },
+  "recommendations": {
+
+  },
+  "suggestions": {
+
+  },
+  "conflicting": {
+
+  },
+  "providing": {
+
+  },
+  "replacing": {
+
+  },
+  "attributes": {
+
+  },
+  "groupings": {
+
+  },
+  "recipes": {
+
+  },
+  "version": "2.0.4",
+  "source_url": "",
+  "issues_url": ""
+}
