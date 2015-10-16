@@ -127,6 +127,13 @@ action :create do
           group u['gid'] || u['username']
           mode "0600"
         end
+        template "#{home_dir}/.ssh/id_rsa_git.pub" do
+          source "git_key_pub.erb"
+          cookbook new_resource.cookbook
+          owner u['username']
+          group u['gid'] || u['username']
+          mode "0600"
+        end
 
         if u['ssh_keys']
           template "#{home_dir}/.ssh/authorized_keys" do
