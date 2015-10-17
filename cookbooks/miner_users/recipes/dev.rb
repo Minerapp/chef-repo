@@ -1,6 +1,6 @@
-# node.default['authorization']['sudo']['passwordless'] = true
-# node.default['authorization']['sudo']['groups'] = ["minerops", "sysadmin", "wheel", "admin"]
-# node.default['authorization']['sudo']['include_sudoers_d'] = true
+node.default['authorization']['sudo']['passwordless'] = true
+node.default['authorization']['sudo']['groups'] = ["minerops", "sysadmin", "wheel", "admin"]
+node.default['authorization']['sudo']['include_sudoers_d'] = true
 
  users_manage "minerdevservicedeployers" do
    group_id 3000
@@ -27,7 +27,8 @@ execute "Run bashrc init for" do
 end
 
 
-# sudo 'minerdevservicedeployers' do
-#   group     "%minerdevservicedeployers"    # or a username
-#   nopasswd true
-# end
+sudo 'minerdevservicedeployers' do
+  group     "%minerdevservicedeployers"    # or a username
+  nopasswd true
+  commands ['/usr/local/bin/pm2']
+end
