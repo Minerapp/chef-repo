@@ -30,5 +30,6 @@ end
 sudo 'minerdevservicedeployers' do
   group     "%minerdevservicedeployers"    # or a username
   nopasswd true
-  commands ['/usr/local/bin/pm2']
+  commands ['/usr/local/bin/pm2', '/bin/echo']
+  env_keep_add ['PM2_HOME']
 end
