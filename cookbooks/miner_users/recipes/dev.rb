@@ -27,7 +27,7 @@ execute "Run bashrc init for" do
 end
 
 
-sudo 'minerdevservicedeployers' do
-  user     "%minerdevservicedeployers"    # or a username
-  nopasswd true
-end
+# sudo 'minerdevservicedeployers' do
+#   group     "%minerdevservicedeployers"    # or a username
+#   nopasswd true
+# end
