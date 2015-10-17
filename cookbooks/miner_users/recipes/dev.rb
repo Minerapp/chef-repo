@@ -1,3 +1,7 @@
+node.default['authorization']['sudo']['passwordless'] = true
+node.default['authorization']['sudo']['groups'] = ["minerops", "sysadmin", "wheel", "admin"]
+node.default['authorization']['sudo']['include_sudoers_d'] = true
+
  users_manage "minerdevservicedeployers" do
    group_id 3000
    action [ :remove, :create ]
@@ -22,3 +26,8 @@ execute "Run bashrc init for" do
   environment env
 end
 
+
+sudo 'minerdevservicedeployers' do
+  user     "%minerdevservicedeployers"    # or a username
+  nopasswd true
+end
