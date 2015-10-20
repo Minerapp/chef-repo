@@ -2,6 +2,7 @@
   "id"       : "minerdevservicedeploy",
   "comment"  : "Services deploy for dev env",
   "groups"   : ["minerdevservicedeployers", "minerdevdatabaseadmins" ],
+  "gid"      : 3000,
   "ssh_keys" : [
     "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCOoCCJ1O5lM9vzoNJh1FSjO9RfZlLZ1KLVmjHvUAeb8heOdi+NGgZRJGFHVJpVfSU+GMZZ3n4dEaXQgNcL5lKfCCvOrDepBxAf+CeVClGplPV+9UUPmfJLtJnsjv34oWnTThqrmZWMw6xloHVrBWqHMdgHNw0XeEXutQK7EPoDyZjR3x0rUxVzFELa+I+w71eKTKJFbbnl/y/v4Vv3BbQ93X1iyO7ae9b2ZOxkXQYSjaXIZ4WuRmYYGuYdeCLupTpbNrSDd8IP9gtAH4pEp+5mCMq3dfmXy3FZS4e/SfPss6zzwFs1R7hVpYSQDUoCfvt4kzWD8a0NqiGpkd9WK/UN minerops"
   ],
