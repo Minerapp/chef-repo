@@ -55,8 +55,9 @@ action :create do
     if new_resource.group_id
       gid new_resource.group_id
     end
-    members security_group
+    # members security_group
   end
+
   if Chef::Config[:solo] and not chef_solo_search_installed?
     Chef::Log.warn("This recipe uses search. Chef Solo does not support search unless you install the chef-solo-search cookbook.")
   else
@@ -182,7 +183,12 @@ action :create do
     end
   end
 
-
+  group new_resource.group_name do
+    if new_resource.group_id
+      gid new_resource.group_id
+    end
+    members security_group
+  end
 
 
 end
