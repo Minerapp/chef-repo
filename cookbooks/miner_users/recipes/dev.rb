@@ -3,7 +3,7 @@ node.default['authorization']['sudo']['groups'] = ["minerops", "sysadmin", "whee
 node.default['authorization']['sudo']['include_sudoers_d'] = true
 
  users_manage "minerdevservicedeployers" do
-   group_name 'minerdevservicedeployers'
+   # group_name 'minerdevservicedeployers'
    group_id 3000
    action [ :remove, :create ]
  end

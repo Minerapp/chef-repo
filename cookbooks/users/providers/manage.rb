@@ -85,7 +85,7 @@ action :create do
       # This should correct that without breaking functionality.
       if u['gid'] and u['gid'].kind_of?(Numeric)
         group u['username'] do
-          action :create
+          # action :create
           gid u['gid']
         end
       end
