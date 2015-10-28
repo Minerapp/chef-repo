@@ -1,5 +1,6 @@
 name 'acl'
 maintainer 'Maks3w'
+maintainer_email 'asd@gmail.com'
 license 'MIT'
 description 'Setup POSIX Access Control Lists (ACLs)'
 long_description 'Setup POSIX Access Control Lists (ACLs)'
