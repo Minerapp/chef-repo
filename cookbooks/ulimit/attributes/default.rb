@@ -3,7 +3,7 @@
 default['ulimit']['pam_su_template_cookbook'] = nil
 default['ulimit']['users'] = {
   :minerops => {
-  :filehandle_limit => 'unlimited', # optional
+  :filehandle_limit => 61504, # optional
   :filehandle_soft_limit => 8192, # optional; not used if filehandle_limit is set)
   :filehandle_hard_limit => 8192, # optional; not used if filehandle_limit is set)
   :process_limit => 61504, # optional
